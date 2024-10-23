@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #f39c12, #8e44ad, #2980b9, #27ae60);
+    background-size: 300% 300%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.caption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: transform 0.3s ease;
+}
+
+.tilt:hover {
+    transform: rotateY(10deg) rotateX(10deg);
+}
+
+.typing {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 4s steps(30) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.message-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    animation: fadeIn 4s ease-in-out;
+}
+
+.surprise-btn, .mute-btn {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.surprise-btn:hover, .mute-btn:hover {
+    background-color: #e67e22;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+/* Animations */
+@keyframes rotateText {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes confettiFall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.confetto {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 0.7;
+    animation: confettiFall 5s linear infinite;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+/* Existing Styles Here */
+
+.photo-album {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.photo-album h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.album {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.photo:hover {
+    animation: dance 1.5s infinite;
+}
+
+@keyframes dance {
+    0%, 100% { transform: rotateY(0deg) rotateX(0deg); }
+    25% { transform: rotateY(10deg) rotateX(5deg); }
+    50% { transform: rotateY(-10deg) rotateX(-5deg); }
+    75% { transform: rotateY(10deg) rotateX(5deg); }
+}

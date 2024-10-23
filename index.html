@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container tilt">
+        <h1 id="greeting" class="typing">Happy Birthday, Susobhan !🥳🫂</h1>
+        <h2 class="rotating-text">Wishing you all the best!</h2>
+
+        <div class="message-box fade-in-box">
+            <p>Hey Bro ,</p>
+            <p>On your special day, I just want to wish you an awesome year ahead full of success, joy, and happiness. May all your dreams come true, and I hope this year brings you everything you're looking for.</p>
+            
+          <p>Stay cool and amazing as always!</p>
+            <p>Your friend, Rupam</p>
+        </div>
+
+        <!-- New Photo Album Section -->
+        <section class="photo-album">
+            <h2>My friend has some super powers!</h2>
+            <div class="album">
+                <div class="photo">
+                    <img src="funny1.jpg" alt="Funny Photo 1">
+                    <p class="caption">The Aquaman </p>
+                </div>
+                <div class="photo">
+                    <img src="funny2.jpg" alt="Funny Photo 2">
+                    <p class="caption">The one punch man</p>
+                </div>
+                <div class="photo">
+                    <img src="funny3.jpg" alt="Funny Photo 3">
+                    <p class="caption">Jr. Jhonny</p>
+                </div>
+                <!-- Add more photos here -->
+            </div>
+        </section>
+        <br>
+        <button class="surprise-btn" onclick="showSurprise()">Click for a Surprise</button>
+        <button class="mute-btn" onclick="toggleMusic()">Mute/Unmute Music</button>
+      
+        <div id="confetti"></div>
+        <audio id="birthday-song" loop>
+            <source src="song.mp3" type="audio/mpeg">
+        </audio>
+
+        <footer>
+            <p>&copy; 2024 Birthday Wishes by Rupam</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
